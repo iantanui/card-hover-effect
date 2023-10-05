@@ -1,0 +1,99 @@
+/* src/components/Card.css */
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 10rem;
+    justify-content: center;
+    margin: 4rem;
+    padding: 4rem;
+  }
+  .card {
+    position: relative;
+    width: 100%;
+    height: 30vh;
+    max-width: 100%;
+    margin: 1rem;
+    padding: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 40%;
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out;
+  
+    @media (max-width: 1200px) {
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    }
+  
+    @media (max-width: 600px) {
+      grid-template-columns: repeat(auto-fill, minmax(100%, 1fr));
+      justify-content: center;
+      margin: -1rem;
+    }
+  }
+  
+  .card-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.3);
+    color: white;
+    padding: 1rem;
+    transform: translateY(100%);
+    transition: transform 0.3s ease-in-out;
+    text-align: center;
+    align-items: center;
+    overflow: hidden;
+  }
+  
+  .card:hover .card-overlay {
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  .card-image {
+    overflow: hidden;
+  }
+  
+  .card-image img {
+    width: 100%;
+    height: 100%;
+  }
+  
+  .card-content {
+    padding: 10px;
+  }
+  
+  .card h3 {
+    margin: 0;
+    font-size: 1.5rem;
+  }
+  
+  .card p {
+    margin: 0;
+  }
+  .card-overlay .MuiCard-root {
+    background-color: transparent;
+    color: white;
+  }
+  
+  .card-overlay .MuiCardHeader-root,
+  .card-overlay .MuiCardContent-root,
+  .card-overlay .MuiCardActions-root,
+  .card-overlay .MuiCollapse-root {
+    background-color: transparent;
+    color: white;
+  }
+  
+  .card-overlay .MuiIconButton-root {
+    color: white;
+  }
+  
+  .card-overlay .MuiIconButton-root:hover {
+    background-color: rgba(
+      255,
+      255,
+      255,
+      0.1
+    ); /* Add a hover effect to the icons */
+  }
+  
